@@ -533,7 +533,7 @@ then
       if [ $? != 0 ] ; then
         dump "ERROR: Patch failure !! Please check your patches directory!"
         dump "       Try to perform a clean build using --clean ."
-        dump "       Problem patch: $dir/$PATCHNAME"
+        dump "       Problem patch: $dir/$PATCHNAME into $SRC_DIR/$PATCHDIR"
         exit 1
       fi
     done
