@@ -661,7 +661,6 @@ echo "Building boost for android for $ARCH"
   fi
 
   {
-    set -x
     $TIME_CMD ./b2 -q                \
         -d+2                         \
         --user-config=$SCRIPTDIR/user-config.jam \
@@ -684,7 +683,7 @@ echo "Building boost for android for $ARCH"
         $LIBRARIES                   \
         $LIBRARIES_BROKEN            \
         install 2>&1 \
-        || { set +x; dump "ERROR: Failed to build boost for android for $ARCH!" ; rm -rf $PREFIX ; exit 1 ; }
+        || { dump "ERROR: Failed to build boost for android for $ARCH!" ; rm -rf $PREFIX ; exit 1 ; }
   } | teelog
 )
   #
