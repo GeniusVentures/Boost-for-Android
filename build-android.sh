@@ -678,7 +678,6 @@ echo "Building boost for android for $ARCH"
 
   {
     ./b2 -q                          \
-        -d+2                         \
         --user-config=$SCRIPTDIR/user-config.jam \
         --ignore-site-config         \
         -j$NCPU                      \
